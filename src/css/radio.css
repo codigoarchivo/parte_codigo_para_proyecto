@@ -21,30 +21,48 @@ body {
   margin: 20rem 0;
 }
 .form__content {
-  border: solid .01rem;
+  border: solid 0.01rem;
   margin: 0 10rem;
-  height: 16rem;
+  height: 12.7rem;
   padding: 2rem;
 }
 .form__box:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 .form__input {
+  display: none;
 }
 .form__label {
   cursor: pointer;
   position: relative;
   font-size: 1.6rem;
-  margin-left: 1rem;
   text-transform: uppercase;
   font-weight: 600;
+  padding-left: 2.5rem;
 }
 .form__label-radio {
-  height: 2rem;
-  width: 2rem;
-  /* left: -3rem; */
-  top: -0.1rem;
-  border: solid .5rem blue;
+  border: solid 0.5rem blue;
+  display: block;
+  height: 2.2rem;
+  width: 2.2rem;
+  top: -0.2rem;
   border-radius: 50%;
   position: absolute;
+}
+.form__label-radio::after {
+  background-color: blue;
+  content: "";
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.form__input:checked ~ .form__label .form__label-radio::after {
+  opacity: 1;
 }
