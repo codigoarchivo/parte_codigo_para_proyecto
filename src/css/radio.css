@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.form {
+  margin: 20rem 0;
+}
+.form__content {
+  border: solid .01rem;
+  margin: 0 10rem;
+  height: 16rem;
+  padding: 2rem;
+}
+.form__box:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.form__input {
+}
+.form__label {
+  cursor: pointer;
+  position: relative;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.form__label-radio {
+  height: 2rem;
+  width: 2rem;
+  /* left: -3rem; */
+  top: -0.1rem;
+  border: solid .5rem blue;
+  border-radius: 50%;
+  position: absolute;
+}
