@@ -20,19 +20,63 @@ body {
 .form {
   margin: 20rem 0;
 }
+.form__h1 {
+}
 .form__content {
   border: solid 0.01rem;
-  margin: 0 10rem;
-  height: 12.7rem;
+  margin: 0 20rem;
+  height: 30rem;
   padding: 2rem;
 }
 .form__box:not(:last-child) {
   margin-bottom: 1.5rem;
 }
-.form__input {
+/* text */
+.form__input-text {
+  background-color: #eee;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  display: block;
+
+  transition: all 0.3s;
+}
+.form__input-text:invalid {
+  border-bottom: solid 3px transparent;
+}
+.form__input-text:focus {
+  border-bottom: solid 3px #c00000;
+  outline: none;
+}
+.form__input-text:valid {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: solid 3px #55c57a;
+}
+.form__input-text::placeholder {
+  color: #999;
+}
+.form__label-text {
+  font: menu;
+  margin-left: 2rem;
+  margin-bottom: 0.7rem;
+  display: block;
+
+  transition: all 0.3s;
+}
+.form__input-text:placeholder-shown + .form__label-text {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-4rem);
+}
+/* radio */
+.form__input-radio {
   display: none;
 }
-.form__label {
+.form__label-radio {
   cursor: pointer;
   position: relative;
   font-size: 1.6rem;
@@ -40,16 +84,17 @@ body {
   font-weight: 600;
   padding-left: 2.5rem;
 }
-.form__label-radio {
+.form__span-radio {
   border: solid 0.5rem blue;
-  display: block;
   height: 2.2rem;
   width: 2.2rem;
+  display: inline-block;
+  left: 0;
   top: -0.2rem;
   border-radius: 50%;
   position: absolute;
 }
-.form__label-radio::after {
+.form__span-radio::after {
   background-color: blue;
   content: "";
   display: block;
@@ -63,6 +108,17 @@ body {
   opacity: 0;
   transition: opacity 0.2s;
 }
-.form__input:checked ~ .form__label .form__label-radio::after {
+.form__input-radio:checked ~ .form__label-radio .form__span-radio::after {
   opacity: 1;
+}
+.btn[type="submit"] {
+  padding: 1rem;
+}
+.btn__color {
+  background-color: tomato;
+  border: none;
+}
+.form *:disabled {
+  cursor: default;
+  filter: blur(2px);
 }

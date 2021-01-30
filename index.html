@@ -12,27 +12,41 @@
     <section class="container">
       <form action="#" class="form" id="formulario">
         <div class="form__content">
+          <h1 class="form__h1">Formulario</h1>
           <div class="form__box">
-            <input type="radio" class="form__input" id="uno" name="size"/>
-            <label for="uno" class="form__label">
-                <span class="form__label-radio"></span>uno
+            <input type="text" class="form__input-text" placeholder="name" id="nombre" required>
+            <label for="name" class="form__label-text">Nombre</label>
+          </div>
+          <div class="form__box">
+            <input type="email" class="form__input-text" placeholder="Email" id="email" required>
+            <label for="email" class="form__label-text">Email</label>
+          </div>
+          <div class="form__box">
+            <input type="radio" class="form__input-radio" id="uno" name="size">
+            <label for="uno" class="form__label-radio">
+              <span class="form__span-radio"></span>uno
             </label>
           </div>
           <div class="form__box">
-            <input type="radio" class="form__input" id="dos" name="size"/>
-            <label for="dos" class="form__label">
-                <span class="form__label-radio"></span>dos
+            <input type="radio" class="form__input-radio" id="dos" name="size">
+            <label for="dos" class="form__label-radio">
+              <span class="form__span-radio"></span>dos
             </label>
           </div>
+          <textarea placeholder="Message"></textarea>
           <div class="form__box">
-            <input type="radio" class="form__input" id="tres" name="size"/>
-            <label for="tres" class="form__label">
-                <span class="form__label-radio"></span>tres
-            </label>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label for="vehicle3" class="form__label-radio">
+                <span class="form__span-radio"></span>I have read and agreed with <a href="">the terms and conditions.</a>
+              </label>
+          </div>
+          <div class="form__box">
+              <input type="submit" class="btn btn__color" value="enviar">
           </div>
         </div>
       </form>
     </section>
     <!-- Radio -->
+    <script src="/src/js/index.js"></script>
   </body>
 </html>
