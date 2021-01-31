@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>códigoArchivo</title>
-    <link rel="stylesheet" href="/src/css/radio.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
   <body>
     <!-- Radio -->
@@ -13,6 +13,7 @@
       <form action="#" class="form" id="formulario">
         <div class="form__content">
           <h1 class="form__h1">Formulario</h1>
+
           <div class="form__box">
             <input type="text" class="form__input-text" placeholder="name" id="nombre" required>
             <label for="name" class="form__label-text">Nombre</label>
@@ -21,23 +22,31 @@
             <input type="email" class="form__input-text" placeholder="Email" id="email" required>
             <label for="email" class="form__label-text">Email</label>
           </div>
-          <div class="form__box">
+
+          
+          <div class="form__box form__div-box">
             <input type="radio" class="form__input-radio" id="uno" name="size">
             <label for="uno" class="form__label-radio">
               <span class="form__span-radio"></span>uno
             </label>
           </div>
-          <div class="form__box">
+          <div class="form__box form__div-box">
             <input type="radio" class="form__input-radio" id="dos" name="size">
             <label for="dos" class="form__label-radio">
               <span class="form__span-radio"></span>dos
             </label>
           </div>
-          <textarea placeholder="Message"></textarea>
+
           <div class="form__box">
-              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-              <label for="vehicle3" class="form__label-radio">
-                <span class="form__span-radio"></span>I have read and agreed with <a href="">the terms and conditions.</a>
+            <label for="info" class="form__label-textarea">Review of W3Schools:</label>
+              <textarea class="form__textarea-content" id="info" name="info" rows="4" cols="50">
+                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              </textarea>
+          </div>  
+          <div class="form__box">
+              <input type="checkbox" class="form__input-checkbox" id="terms" name="terms" value="Boat">
+              <label for="terms" class="form__label-checkbox">
+                <span class="form__span-checkbox"></span>I have read and agreed with <a href="">the terms and conditions.</a>
               </label>
           </div>
           <div class="form__box">
