@@ -1,0 +1,63 @@
+/*!SASS*/
+/* 
+html {
+  font-size: 62.5%;<.625%*16px= 10px> 1rem= 10px, 10px/16px= 62.5%  
+
+  *<.5625%*16px= 9px> 1rem= 9px, 9px/16px= 56.25%
+  @include responde (tab-land) {//width 1200px
+    font-size: 56.25%; 
+  }
+
+  *<.5%*16px= 8px> 1rem= 8px, 8px/16px= 50% 
+  @include responde (tab-port) {//width 900px?
+    font-size: 50%;
+  }
+
+  *<.3%*16px= 4,8px> 1rem= 4,8px, 4,8px/16px= 30% 
+  @include responde (phone) {
+    font-size: 30%;
+  }
+
+  *<.75%*16px= 12px> 1rem= 12px, 12px/16px= 75%
+  @include responde (big-desktop) {//width 1200px?
+    font-size: 75%;
+  }
+}
+
+
+@mixin responde ($breakpoint) {
+    *<37.5em*16px= 600px>  600px / 16px = 37.5em) PHONE <<<<<
+    @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) { @content };
+    }
+
+   *<56.25em*16px= 900px>  900px / 16px = 56.25em TABLET PORTRAIT <<<<<
+    @if $breakpoint == tab-port {//width 900px?
+      @media only screen and (max-width: 56.25em) { @content };
+    }
+
+   *<75em*16px= 1200px> 1200px / 16px = 75em TABLET LANDSCAPE <<<<<
+    @if $breakpoint == tab-land{//width 1200px?
+      @media only screen and (max-width: 75em) { @content };
+    }
+
+   *<112.5em*16px= 1800px> 1800px / 16px = 112.5em BIG DESKTOP <<<<<
+    @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) { @content };
+    }     
+}
+ */
+/*!CSS*/
+/* html { 
+  *font-size: 62.5%;<.625*16= 10px> 1rem= 10px, 10px/16px= 62.5%  
+  *font-size: 56.25%;<.5625*16= 9px> 1rem= 9px, 9px/16px= 56.25%  
+  *font-size: 50%;<.5*16= 8px> 1rem= 8px, 8px/16px= 50% 
+  *font-size: 30%;<.3*16= 4,8px> 1rem= 4,8px, 4,8px/16px= 30% 
+  *font-size: 75%;<.75*16= 12px> 1rem= 12px, 12px/16px= 75%
+ } 
+ 
+*@media only screen and (max-width: 37.5em) {600px / 16px = 37.5em} PHONE <<<<<
+*@media only screen and (max-width: 56.25em) {900px / 16px = 56.25em} TABLET PORTRAIT <<<<<
+*@media only screen and (max-width: 75em) {1200px / 16px = 75em} TABLET LAND SCAPE <<<<<
+*@media only screen and (min-width: 112.5em) {1800px / 16px = 112.5em} BIG DESKTOP <<<<<
+*/
