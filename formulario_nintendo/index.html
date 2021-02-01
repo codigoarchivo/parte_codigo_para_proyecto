@@ -12,11 +12,15 @@
     <section class="container">
       <form action="#" class="form" id="formulario">
         <div class="form__content">
-          <h1 class="form__h1">Formulario</h1>
+          <h1 class="form__h1 form__box">Formulario</h1>
 
           <div class="form__box">
-            <input type="text" class="form__input-text" placeholder="name" id="nombre" required>
+            <input type="text" class="form__input-text" placeholder="Name" id="nombre" required>
             <label for="name" class="form__label-text">Nombre</label>
+          </div>
+          <div class="form__box">
+            <input type="surname" class="form__input-text" placeholder="Surname" id="surname" required>
+            <label for="surname" class="form__label-text">Apellido</label>
           </div>
           <div class="form__box">
             <input type="email" class="form__input-text" placeholder="Email" id="email" required>
@@ -27,14 +31,16 @@
           <div class="form__box form__div-box">
             <input type="radio" class="form__input-radio" id="uno" name="size">
             <label for="uno" class="form__label-radio">
-              <span class="form__span-radio"></span>uno
+              <span class="form__span-radio"></span>
             </label>
+            <spam class="form__span-radio-checkbox form__span-space">uno</spam>
           </div>
           <div class="form__box form__div-box">
             <input type="radio" class="form__input-radio" id="dos" name="size">
             <label for="dos" class="form__label-radio">
-              <span class="form__span-radio"></span>dos
+              <span class="form__span-radio"></span>
             </label>
+             <span class="form__span-radio-checkbox">dos</span>
           </div>
 
           <div class="form__box">
@@ -46,11 +52,12 @@
           <div class="form__box">
               <input type="checkbox" class="form__input-checkbox" id="terms" name="terms" value="Boat">
               <label for="terms" class="form__label-checkbox">
-                <span class="form__span-checkbox"></span>I have read and agreed with <a href="">the terms and conditions.</a>
+                <span class="form__span-checkbox"></span>
               </label>
+              <span class="form__span-radio-checkbox">I have read and agreed with <a href="">the terms and conditions.</a></span>
           </div>
           <div class="form__box">
-              <input type="submit" class="btn btn__color" value="enviar">
+              <button class="btn btn__color ">Click Me</button>
           </div>
         </div>
       </form>
