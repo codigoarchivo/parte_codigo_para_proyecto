@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>códigoArchivo</title>
-    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Radio -->
@@ -15,12 +19,12 @@
           <h1 class="form__h1 form__box">Formulario</h1>
 
           <div class="form__box">
-            <input type="text" class="form__input-text" placeholder="Name" id="nombre" required>
+            <input type="text" class="form__input-text" placeholder="Nombre" id="nombre" required>
             <label for="name" class="form__label-text">Nombre</label>
           </div>
           <div class="form__box">
-            <input type="surname" class="form__input-text" placeholder="Surname" id="surname" required>
-            <label for="surname" class="form__label-text">Apellido</label>
+            <input type="tel" class="form__input-text" placeholder="Telefono" id="phone" required>
+            <label for="phone" class="form__label-text">Telefono</label>
           </div>
           <div class="form__box">
             <input type="email" class="form__input-text" placeholder="Email" id="email" required>
@@ -33,28 +37,25 @@
             <label for="uno" class="form__label-radio">
               <span class="form__span-radio"></span>
             </label>
-            <spam class="form__span-radio-checkbox form__span-space">uno</spam>
+            <spam class="form__span-radio-checkbox form__span-space">Basico</spam>
           </div>
           <div class="form__box form__div-box">
             <input type="radio" class="form__input-radio" id="dos" name="size">
             <label for="dos" class="form__label-radio">
               <span class="form__span-radio"></span>
             </label>
-             <span class="form__span-radio-checkbox">dos</span>
+             <span class="form__span-radio-checkbox">Completo</span>
           </div>
 
           <div class="form__box">
-            <label for="info" class="form__label-textarea">Review of W3Schools:</label>
-              <textarea class="form__textarea-content" id="info" name="info" rows="4" cols="50">
-                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </textarea>
+            <textarea class="form__label-textarea" placeholder="Mensaje" rows="4" cols="50"></textarea>
           </div>  
           <div class="form__box">
               <input type="checkbox" class="form__input-checkbox" id="terms" name="terms" value="Boat">
               <label for="terms" class="form__label-checkbox">
                 <span class="form__span-checkbox"></span>
               </label>
-              <span class="form__span-radio-checkbox">I have read and agreed with <a href="">the terms and conditions.</a></span>
+              <span class="form__span-radio-checkbox">He leido y acepto <a href="#" class="form__span-radio-checkbox-a" >Los terminos y condiciones.</a></span>
           </div>
           <div class="form__box">
               <button class="btn btn__color ">Click Me</button>
@@ -63,6 +64,6 @@
       </form>
     </section>
     <!-- Radio -->
-    <script src="/src/js/index.js"></script>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
