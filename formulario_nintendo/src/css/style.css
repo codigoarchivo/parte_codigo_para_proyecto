@@ -6,9 +6,33 @@
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
-html {
-  font-size: 62.5%;
-}
+
+@media only screen and (min-width: 90em) {/* 4K  2560px*/
+  html {
+    font-size: 140%; /* 2.24px/16px= 1,14 */
+  }
+} 
+@media only screen and (max-width: 90em) {/* lapto L 1440px */
+  html {
+    font-size: 80%; /* 12.8px/16px= 0,8 */
+  }
+} 
+@media only screen and (max-width: 64em) {/* lapto 1024px */
+  html {
+    font-size: 69%; /* 11.04px/16px= 0,69*/
+  }
+} 
+@media only screen and (max-width: 48em) {/* table 768px */
+  html {
+    font-size: 50%; /* 8px/16px= 0,5*/
+  }
+} 
+@media only screen and (max-width: 20em) {/* mobil S  320px */
+  html {
+    font-size: 40%; /* 6.4px/16px= 0,4*/
+  }
+} 
+
 body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -17,13 +41,18 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   
-  font-family: 'Raleway', sans-serif;
-  color: #999;
+  font-family: "Raleway", sans-serif;
+  color: #c4c2c2;
 
   height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 48em) {/* table   768px */
+  body {
+    background-image: url("../img/foto-small.jpg");
+  }
 }
 .container {
   max-width: 80rem;
@@ -33,15 +62,14 @@ body {
 .form__h1 {
 }
 .form__content {
-  background-color: #00000044;
+  background-color: #00000085;
   box-shadow: 0 0.5rem 0.6rem rgb(0, 0, 0, 63%);
   border: solid transparent 0.01rem;
   border-radius: 0.5rem;
-  margin: 0 10rem;
   padding: 4rem;
 }
 .form__box:not(:last-child) {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 /* text */
 .form__input-text {
@@ -61,7 +89,7 @@ body {
   border-bottom: solid 3px transparent;
 }
 .form__input-text:focus {
-  border-bottom: solid 3px purple;
+  border-bottom: solid 3px #3f87c2;
   outline: none;
 }
 .form__input-text:valid {
@@ -104,8 +132,7 @@ body {
   font-size: medium;
 }
 .form__span-radio {
-  border: solid 0.5rem #eee;
-  background-color: purple;
+  border: solid 0.2rem #eee;
   height: 3rem;
   width: 3rem;
   display: inline-block;
@@ -115,7 +142,7 @@ body {
   position: absolute;
 }
 .form__span-radio::after {
-  background-color: #eee;
+  background-color: #3f87c2;
   content: "";
   display: block;
   width: 1.5rem;
@@ -128,9 +155,7 @@ body {
   opacity: 0;
   transition: opacity 0.2s;
 }
-.form__input-radio:checked ~ 
-.form__label-radio 
-.form__span-radio::after {
+.form__input-radio:checked ~ .form__label-radio .form__span-radio::after {
   opacity: 1;
 }
 /*sespacio*/
@@ -143,10 +168,15 @@ body {
   font-weight: 600;
   padding-left: 4rem;
 }
-
+@media only screen and (max-width: 64em) {/* lapto 1024px */
+  .form__span-radio-checkbox {
+    font-size: 1.2rem;
+  }
+} 
 /* textarea*/
 .form__label-textarea {
   background-color: #eee;
+  font-size: 1.3rem;
   border-radius: 0.5rem;
   font-weight: 600;
   width: 100%;
@@ -156,7 +186,7 @@ body {
 }
 .form__span-radio-checkbox-a {
   color: currentColor;
-  transition: ease-in .2s;
+  transition: ease-in 0.2s;
 }
 .form__span-radio-checkbox-a:hover {
   filter: brightness(0.9);
@@ -176,7 +206,7 @@ body {
   position: absolute;
 }
 .form__span-checkbox::after {
-  background-color: purple;
+  background-color: #3f87c2;
   clip-path: polygon(77% 16%, 90% 25%, 50% 100%, 0 60%, 10% 48%, 44% 73%);
   content: "";
   display: block;
@@ -197,12 +227,12 @@ body {
 }
 /* boton */
 .btn {
-  font-size: 14px;
+  font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 20px 30px;
+  letter-spacing: 0.2rem;
+  padding: 2rem 2rem;
   overflow: hidden;
-  margin: 10px 0;
+  margin: 1rem 0;
   position: relative;
   width: 100%;
   border-radius: 3rem;
@@ -214,14 +244,14 @@ body {
 .btn .circle {
   position: absolute;
   background-color: #eee;
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
   animation: scale 0.5s ease-out;
 }
 .btn__color {
-  background-color: purple;
+  background-color: #3f87c2;
   color: #eee;
 }
 @keyframes scale {
