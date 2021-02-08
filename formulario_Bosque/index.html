@@ -10,59 +10,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Radio -->
     <section class="container">
       <form action="#" class="form" autocomplete="off">
-        <div class="form__content">
-          <h1 class="form__h1 form__box">Formulario</h1>
+        <h1 class="form__h1 form__box">Formulario</h1>
 
-          <div class="form__box">
-            <input type="text" class="form__input-text" placeholder="Nombre" id="nombre" required>
-            <label for="name" class="form__label-text">Nombre</label>
-          </div>
-          <div class="form__box">
-            <input type="tel" class="form__input-text" placeholder="Teléfono" id="phone" required>
-            <label for="phone" class="form__label-text">Teléfono</label>
-          </div>
-          <div class="form__box">
-            <input type="email" class="form__input-text" placeholder="Email" id="email" required>
-            <label for="email" class="form__label-text">Email</label>
-          </div>
+        <div class="form__box">
+          <input type="text" class="form__input-text" placeholder="Nombre" id="nombre" required>
+          <label for="name" class="form__label-text">Nombre</label>
+        </div>
+        <div class="form__box">
+          <input type="tel" class="form__input-text" placeholder="(Teléfono) 255-25-255 " pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" id="phone" required>
+          <label for="phone" class="form__label-text">Teléfono</label>
+        </div>
+        <div class="form__box">
+          <input type="email" class="form__input-text" placeholder="Email" id="email" required>
+          <label for="email" class="form__label-text">Email</label>
+        </div>
 
-          
-          <div class="form__box form__div-box">
-            <input type="radio" class="form__input-radio" id="uno" name="size">
-            <label for="uno" class="form__label-radio">
-              <span class="form__span-radio"></span>
+        <div class="form__box form__div-box">
+          <input type="radio" class="form__input-radio" id="básico" name="size">
+          <label for="básico" class="form__label-radio">
+            <span class="form__span-radio"></span>
+          </label>
+          <spam class="form__span-radio-checkbox form__span-space">Básico</spam>
+        </div>
+        <div class="form__box form__div-box">
+          <input type="radio" class="form__input-radio" id="completo" name="size">
+          <label for="completo" class="form__label-radio">
+            <span class="form__span-radio"></span>
+          </label>
+            <span class="form__span-radio-checkbox">Completo</span>
+        </div>
+
+        <div class="form__box">
+          <textarea class="form__label-textarea" placeholder="Mensaje" rows="4" ></textarea>
+        </div>  
+        
+        <div class="form__box">
+            <input type="checkbox" class="form__input-checkbox" id="terms" name="terms">
+            <label for="terms" class="form__label-checkbox">
+              <span class="form__span-checkbox"></span>
             </label>
-            <spam class="form__span-radio-checkbox form__span-space">Básico</spam>
-          </div>
-          <div class="form__box form__div-box">
-            <input type="radio" class="form__input-radio" id="dos" name="size">
-            <label for="dos" class="form__label-radio">
-              <span class="form__span-radio"></span>
-            </label>
-             <span class="form__span-radio-checkbox">Completo</span>
-          </div>
+            <span class="form__span-radio-checkbox">He leído y acepto <a href="#" class="form__span-radio-checkbox-a" >Los términos y condiciones.</a></span>
+        </div>
 
-          <div class="form__box">
-            <textarea class="form__label-textarea" placeholder="Mensaje" rows="4" cols="50"></textarea>
-          </div>  
-          
-          <div class="form__box">
-              <input type="checkbox" class="form__input-checkbox" id="terms" name="terms" value="Boat">
-              <label for="terms" class="form__label-checkbox">
-                <span class="form__span-checkbox"></span>
-              </label>
-              <span class="form__span-radio-checkbox">He leído y acepto <a href="#" class="form__span-radio-checkbox-a" >Los términos y condiciones.</a></span>
-          </div>
-
-          <div class="form__box">
-              <button class="btn btn__color ">Enviar</button>
-          </div>
+        <div class="form__box">
+            <button class="btn btn__color ">Enviar</button>
         </div>
       </form>
     </section>
-    <!-- Radio -->
   </body>
 </html>
